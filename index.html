@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OG Studio Pro - 1-Click Speed Booster for Cyber Cafes</title>
+    <meta name="description" content="Stop wasting time in Photoshop. Format Aadhaar/PAN cards and passport photos in 5 seconds. Fully offline, designed for legacy shop PCs. Try 14 days free.">
+    
+    <!-- Google Fonts: Outfit and Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Vanilla CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Inline Custom Styles for Minimalist Premium Design -->
+    <style>
+        /* Minimalist B2B Hero Section */
+        .brand-hero-section {
+            padding: 90px 0 60px 0;
+            background-color: var(--bg-surface);
+            border-bottom: 1px solid var(--border-subtle);
+            position: relative;
+            overflow: hidden;
+        }
+        .brand-hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        /* Premium Large Founder Cutout */
+        .founder-cutout-container {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            height: 100%;
+            width: 100%;
+        }
+        .founder-large-cutout {
+            max-width: 100%;
+            height: auto;
+            max-height: 550px;
+            object-fit: contain;
+            filter: drop-shadow(0 20px 40px rgba(79, 156, 247, 0.4));
+            transform: scale(1.05); /* Slight pop out effect */
+            transform-origin: bottom center;
+        }
+        .founder-label {
+            position: absolute;
+            bottom: 20px;
+            right: 0;
+            background: rgba(8, 11, 17, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(79, 156, 247, 0.3);
+            padding: 10px 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+        .founder-label h4 {
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+        .founder-label p {
+            color: var(--accent-primary);
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        /* Left Column Layout */
+        .hero-left-column {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            gap: 20px;
+            position: relative;
+            z-index: 5;
+        }
+        .hero-welcome-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(79, 156, 247, 0.08);
+            border: 1px solid rgba(79, 156, 247, 0.2);
+            color: var(--accent-primary);
+            padding: 6px 14px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border-radius: 30px;
+            letter-spacing: 0.5px;
+        }
+        .hero-headline-large {
+            font-size: 3.2rem;
+            line-height: 1.15;
+            font-weight: 800;
+            color: #ffffff;
+            max-width: 600px;
+        }
+        .regional-trust-banner {
+            font-size: 1.15rem;
+            color: var(--accent-warm);
+            font-weight: 600;
+            background: rgba(232, 168, 73, 0.05);
+            border: 1px solid rgba(232, 168, 73, 0.15);
+            padding: 8px 18px;
+            border-radius: 12px;
+            display: inline-block;
+        }
+        .hero-actions-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        /* Clean Vertical Showcase Styles */
+        .showcase-section {
+            padding: 90px 0;
+            background-color: var(--bg-deep);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        .showcase-vertical-container {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            margin-top: 40px;
+        }
+        
+        .showcase-item {
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: var(--shadow-premium);
+            transition: var(--transition-smooth);
+        }
+        .showcase-item:hover {
+            border-color: var(--border-focus);
+        }
+        
+        .showcase-header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-subtle);
+            padding-bottom: 16px;
+        }
+
+        .showcase-desc-minimal {
+            font-size: 0.95rem;
+            color: #a3b3c9;
+            margin-bottom: 30px;
+            line-height: 1.5;
+            max-width: 800px;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: stretch;
+        }
+        .comparison-card {
+            background-color: var(--bg-elevated);
+            border-radius: 16px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            box-shadow: var(--shadow-premium);
+            transition: var(--transition-smooth);
+        }
+        .card-before {
+            border: 1px solid rgba(224, 85, 97, 0.15);
+        }
+        .card-after {
+            border: 1px solid rgba(16, 185, 129, 0.15);
+        }
+        .comparison-card:hover {
+            transform: translateY(-2px);
+        }
+        .card-before:hover {
+            border-color: var(--color-danger);
+        }
+        .card-after:hover {
+            border-color: var(--color-success);
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            padding: 4px 10px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            z-index: 10;
+        }
+        .badge-red {
+            background-color: rgba(224, 85, 97, 0.15);
+            color: #e05561;
+            border: 1px solid rgba(224, 85, 97, 0.25);
+        }
+        .badge-green {
+            background-color: rgba(16, 185, 129, 0.15);
+            color: #10b981;
+            border: 1px solid rgba(16, 185, 129, 0.25);
+        }
+
+        .img-container {
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: var(--bg-deep);
+            height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border-subtle);
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .comp-img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            display: block;
+            transition: var(--transition-smooth);
+        }
+        .comp-img:hover {
+            transform: scale(1.015);
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            background-color: var(--bg-deep);
+            padding: 10px 16px;
+            border-radius: 8px;
+            border: 1px solid var(--border-subtle);
+        }
+        .meta-title {
+            font-size: 0.8rem;
+            color: #8896ab;
+            font-weight: 500;
+        }
+        .meta-value {
+            font-family: var(--font-heading);
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+
+        @media (max-width: 992px) {
+            .brand-hero-container {
+                grid-template-columns: 1fr;
+                gap: 50px;
+                text-align: center;
+            }
+            .hero-left-column {
+                align-items: center;
+                text-align: center;
+            }
+            .hero-actions-container {
+                align-items: center;
+            }
+            .founder-cutout-container {
+                justify-content: center;
+            }
+            .comparison-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .img-container {
+                height: 260px;
+            }
+        }
+
+        /* --- NEW STUNNING VISUAL UPGRADES --- */
+        /* 1. Scroll Animations */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 2. Animated Gradient Glows */
+        .hero-glow-1, .hero-glow-2 {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            z-index: 1;
+            animation: drift 15s infinite alternate ease-in-out;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        .hero-glow-1 {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.4) 0%, rgba(0,0,0,0) 70%);
+            top: -100px;
+            right: -100px;
+        }
+        .hero-glow-2 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.2) 0%, rgba(0,0,0,0) 70%);
+            bottom: -150px;
+            left: -150px;
+            animation-delay: -5s;
+        }
+        @keyframes drift {
+            0% { transform: translate(0px, 0px) scale(1); }
+            50% { transform: translate(-30px, 50px) scale(1.1); }
+            100% { transform: translate(20px, -40px) scale(0.9); }
+        }
+
+        /* 3. Glassmorphism */
+        .main-header {
+            background: rgba(8, 11, 17, 0.7) !important;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            z-index: 100;
+        }
+        .founder-label {
+            background: rgba(8, 11, 17, 0.5) !important;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(79, 156, 247, 0.3) !important;
+        }
+
+        /* 4. 3D Hover Effects */
+        .showcase-item, .pricing-card {
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease;
+        }
+        .showcase-item:hover, .pricing-card:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(79, 156, 247, 0.1);
+            border-color: rgba(79, 156, 247, 0.4) !important;
+            z-index: 10;
+        }
+
+        /* 5. Animated Pulse Button */
+        @keyframes softPulse {
+            0% { box-shadow: 0 0 0 0 rgba(79, 156, 247, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(79, 156, 247, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(79, 156, 247, 0); }
+        }
+        .pulse-effect {
+            animation: softPulse 2.5s infinite;
+        }
+
+        /* 6. Vibrant Text Gradients */
+        .text-gradient {
+            background: linear-gradient(270deg, #38bdf8, #818cf8, #34d399, #38bdf8);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradientShift 6s ease infinite;
+            display: inline-block;
+        }
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        /* 7. 3D Kite Flying Logo Effect */
+        .kite-wrapper {
+            position: absolute;
+            top: 15%;
+            left: 5%;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 10;
+            perspective: 1000px;
+        }
+        .kite-node {
+            position: absolute;
+            animation: kiteFly 20s infinite ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform-style: preserve-3d;
+        }
+        .kite-logo {
+            width: 55px;
+            height: 55px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5), 0 0 25px rgba(56, 189, 248, 0.7);
+            object-fit: cover;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        .kite-tail-text {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #ffffff;
+            text-shadow: 0 0 15px rgba(56, 189, 248, 1);
+            font-family: 'Outfit', sans-serif;
+            opacity: 0.9;
+            position: absolute;
+        }
+
+        .tail-left {
+            animation: fadeLeftTail 20s infinite;
+        }
+        .tail-right {
+            animation: fadeRightTail 20s infinite;
+        }
+
+        @keyframes fadeRightTail {
+            0%, 48% { opacity: 1; }
+            50%, 98% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @keyframes fadeLeftTail {
+            0%, 48% { opacity: 0; }
+            50%, 98% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        
+        @keyframes kiteFly {
+            0% { transform: translate(0, 0) rotateX(15deg) rotateY(-25deg) rotateZ(10deg); }
+            25% { transform: translate(40vw, -15vh) rotateX(30deg) rotateY(25deg) rotateZ(20deg); }
+            50% { transform: translate(75vw, 10vh) rotateX(-20deg) rotateY(45deg) rotateZ(-10deg); }
+            75% { transform: translate(35vw, 25vh) rotateX(-30deg) rotateY(-25deg) rotateZ(-20deg); }
+            100% { transform: translate(0, 0) rotateX(15deg) rotateY(-25deg) rotateZ(10deg); }
+        }
+
+        /* Timing Delays for Tail (Smaller negative means later in time = trailing) */
+        .kite-node:nth-child(1) { animation-delay: -20.00s; z-index: 20; } /* Logo */
+        .kite-node:nth-child(2) { animation-delay: -19.70s; z-index: 19; } /* O */
+        .kite-node:nth-child(3) { animation-delay: -19.55s; z-index: 18; } /* G */
+        .kite-node:nth-child(4) { animation-delay: -19.30s; z-index: 17; } /* Space */
+        .kite-node:nth-child(5) { animation-delay: -19.15s; z-index: 16; } /* S */
+        .kite-node:nth-child(6) { animation-delay: -19.00s; z-index: 15; } /* t */
+        .kite-node:nth-child(7) { animation-delay: -18.85s; z-index: 14; } /* u */
+        .kite-node:nth-child(8) { animation-delay: -18.70s; z-index: 13; } /* d */
+        .kite-node:nth-child(9) { animation-delay: -18.55s; z-index: 12; } /* i */
+        .kite-node:nth-child(10) { animation-delay: -18.40s; z-index: 11; } /* o */
+        .kite-node:nth-child(11) { animation-delay: -18.15s; z-index: 10; } /* Space */
+        .kite-node:nth-child(12) { animation-delay: -18.00s; z-index: 9;  } /* P */
+        .kite-node:nth-child(13) { animation-delay: -17.85s; z-index: 8;  } /* r */
+        .kite-node:nth-child(14) { animation-delay: -17.70s; z-index: 7;  } /* o */
+    </style>
+</head>
+<body>
+
+    <!-- Minimal Premium Banner -->
+    <div class="prepaid-banner" id="banner-prepaid">
+        <span>🛡️ <strong>100% Safe Manual UPI Payment:</strong> Simple one-time payment. No Credit Cards, No Auto-Debits, No Hidden Charges.</span>
+    </div>
+
+    <!-- Premium Minimal Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <img src="assets/logo.png" alt="OG Studio Pro Logo" style="height: 32px; width: 32px; border-radius: 6px; object-fit: cover;">
+                <span>OG Studio Pro</span>
+            </a>
+            <nav class="main-nav">
+                <a href="#showcase" class="nav-link">Key Features</a>
+                <a href="#pricing" class="nav-link">Pricing Plans</a>
+                <a href="#faq" class="nav-link">FAQs</a>
+            </nav>
+            <div class="header-cta">
+                <a href="https://github.com/sambhuu/OG-The-Releases/releases/download/3.0/OGStudio_Setup.exe" class="btn btn-sm btn-outline" id="nav-download-btn">Download Setup (.exe)</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- STUNNING MINIMAL 3-COLUMN HERO SECTION -->
+    <section class="brand-hero-section">
+        
+        <!-- 3D KITE FLYING LOGO & TAIL -->
+        <div class="kite-wrapper">
+            <div class="kite-node"><img src="assets/logo.png" alt="Logo Kite" class="kite-logo"></div>
+            <div class="kite-node"><span class="kite-tail-text tail-left">O</span><span class="kite-tail-text tail-right">o</span></div>
+            <div class="kite-node"><span class="kite-tail-text tail-left">G</span><span class="kite-tail-text tail-right">r</span></div>
+            <div class="kite-node"><span class="kite-tail-text tail-left">&nbsp;</span><span class="kite-tail-text tail-right">P</span></div>
+            <div class="kite-node"><span class="kite-tail-text tail-left">S</span><span class="kite-tail-text tail-right">&nbsp;</span></div>
+            <div class="kite-node"><span class="kite-tail-text tail-left">t</span><span class="kite-tail-text tail-right">o</span></div>
+            <div class="kite-node"><span class="kite-tail-text tail-left">u</span><span class="kite-tail-text tail-right">i</span></div>
+            <div class="kite-node"><span class="kite-tail-text tail-left">d</span><span class="kite-tail-text tail-right">d</span></div>
+            <div class="kite-node"><span class="kite-tail-text tail-left">i</span><span class="kite-tail-text tail-right">u</span></div>
+            <div class="kite-node"><span class="kite-tail-text tail-left">o</span><span class="kite-tail-text tail-right">t</span></div>
+            <div class="kite-node"><span class="kite-tail-text tail-left">&nbsp;</span><span class="kite-tail-text tail-right">S</span></div>
+            <div class="kite-node"><span class="kite-tail-text tail-left">P</span><span class="kite-tail-text tail-right">&nbsp;</span></div>
+            <div class="kite-node"><span class="kite-tail-text tail-left">r</span><span class="kite-tail-text tail-right">G</span></div>
+            <div class="kite-node"><span class="kite-tail-text tail-left">o</span><span class="kite-tail-text tail-right">O</span></div>
+        </div>
+
+        <div class="hero-glow-1"></div>
+        <div class="hero-glow-2"></div>
+        <div class="brand-hero-container">
+            
+            <!-- 1. LEFT COLUMN: PRIMARY VALUE PROP -->
+            <div class="hero-left-column">
+                <div class="hero-welcome-badge">
+                    <img src="assets/logo.png" alt="Logo" style="height: 20px; width: 20px; border-radius: 4px; display: inline-block; vertical-align: middle;">
+                    <span>Designed by Sambhav for Cyber Cafe Owners</span>
+                </div>
+                
+                <h1 class="hero-headline-large">
+                    Format & Print in <br/><span class="text-gradient">5 Seconds.</span>
+                </h1>
+                
+                <div class="regional-trust-banner">
+                    <span>Try 14 Days Free — No Card Required</span>
+                </div>
+                
+                <div class="hero-actions-container">
+                    <a href="https://github.com/sambhuu/OG-The-Releases/releases/download/3.0/OGStudio_Setup.exe" class="btn btn-lg btn-primary pulse-effect" style="font-weight: 700; width: 100%; max-width: 380px;" id="hero-download-btn">
+                        <span>🚀 Start 14-Day Free Trial</span>
+                    </a>
+                    <a href="https://wa.me/919472497513?text=Bhaiya%20I%20want%20to%20learn%20more%20about%20OG%20Studio%20Pro" style="color: var(--accent-primary); font-size: 0.9rem; font-weight: 600; text-decoration: underline; margin-top: 5px;" id="hero-whatsapp-btn">
+                        💬 WhatsApp direct support with Sambhav
+                    </a>
+                </div>
+                
+                <p style="color: #64748b; font-size: 0.85rem; font-weight: 500; max-width: 450px; line-height: 1.5; margin-top: 10px;">
+                    Fully unlocked Pro version with no watermarks and no limits in any plan. Works 100% offline on legacy computers.
+                </p>
+            </div>
+            
+            <!-- 2. RIGHT COLUMN: FOUNDER CUTOUT IMAGE -->
+            <div class="founder-cutout-container">
+                <img src="assets/founder.png" alt="Sambhav - Founder of OG Studio Pro" class="founder-large-cutout">
+                <div class="founder-label">
+                    <h4>Sambhav</h4>
+                    <p>Founder & Developer</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- KEY VISUAL SHOWCASE (VERTICAL PAGE SCROLL) -->
+    <section class="showcase-section" id="showcase">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">✨ Core Features</span>
+                <h2 class="section-title">Visual Precision, Zero Effort</h2>
+                <p class="section-desc">See how OG Studio Pro completely replaces Photoshop and Canva manual workflows with direct, offline actions.</p>
+            </div>
+
+            <!-- Vertical Stack Container -->
+            <div class="showcase-vertical-container">
+
+                <!-- Feature 1: Passport Layout Maker -->
+                <div class="showcase-item">
+                    <div class="showcase-header-row">
+                        <h3 style="color: var(--accent-primary); display: flex; align-items: center; gap: 8px;">👤 Passport 8 Photo Layout Maker (Auto 4x6 Sheet)</h3>
+                        <span style="font-size: 0.72rem; background-color: rgba(56, 189, 248, 0.1); padding: 4px 10px; border-radius: 6px; font-weight: 700; color: var(--accent-primary);">Feature 01</span>
+                    </div>
+                    
+                    <p class="showcase-desc-minimal">
+                        Load a single photo and instantly generate a beautifully aligned 8-passport photo sheet on standard 4x6 paper, ready for auto-printing without manual grid cropping or canvas setup.
+                    </p>
+
+                    <div class="comparison-grid">
+                        <div class="comparison-card card-before">
+                            <span class="card-badge badge-red">Manual Photoshop Layout</span>
+                            <div class="img-container">
+                                <img src="assets/before1.png" alt="Photoshop manual canvas alignment" class="comp-img">
+                            </div>
+                            <h4 style="margin-bottom: 6px; color: #ffffff;">Manual duplicate and align layers</h4>
+                            <p class="feature-body" style="margin-bottom: 12px; font-size: 0.85rem; color: #8896ab;">Operator manually scales, duplicates, borders, and positions 8 copies on a 4x6 grid.</p>
+                            <div class="card-meta">
+                                <span class="meta-title">⏱️ Photoshop Time:</span>
+                                <span class="meta-value" style="color: var(--color-danger);">5 Minutes</span>
+                            </div>
+                        </div>
+                        <div class="comparison-card card-after">
+                            <span class="card-badge badge-green">OG Studio 1-Click</span>
+                            <div class="img-container">
+                                <img src="assets/after1.png" alt="Passport 8 photo layout sheet on 4x6" class="comp-img">
+                            </div>
+                            <h4 style="margin-bottom: 6px; color: #ffffff;">Auto-aligned 8 grid sheet</h4>
+                            <p class="feature-body" style="margin-bottom: 12px; font-size: 0.85rem; color: #8896ab;">Instant 4x6 sheet layout generation with standard borders, ready for one-click printing.</p>
+                            <div class="card-meta">
+                                <span class="meta-title">🚀 OG Pro Speed:</span>
+                                <span class="meta-value" style="color: var(--color-success);">5 Seconds ⚡</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature 2: Aadhaar Card Fit -->
+                <div class="showcase-item">
+                    <div class="showcase-header-row">
+                        <h3 style="color: var(--accent-primary); display: flex; align-items: center; gap: 8px;">🪪 Aadhaar Lamination-Ready Card (UIDAI PDF Auto-Align)</h3>
+                        <span style="font-size: 0.72rem; background-color: rgba(56, 189, 248, 0.1); padding: 4px 10px; border-radius: 6px; font-weight: 700; color: var(--accent-primary);">Feature 02</span>
+                    </div>
+
+                    <p class="showcase-desc-minimal">
+                        Decrypt protected UIDAI password-locked PDFs and automatically formats the front and back sections into standard 54x86mm dimensions, designed to fit standard lamination pouches seamlessly.
+                    </p>
+
+                    <div class="comparison-grid">
+                        <div class="comparison-card card-before">
+                            <span class="card-badge badge-red">Manual Screenshot Crop</span>
+                            <div class="img-container">
+                                <img src="assets/before2.png" alt="WhatsApp crooked crop alignment" class="comp-img">
+                            </div>
+                            <h4 style="margin-bottom: 6px; color: #ffffff;">Crooked, inaccurate card crop</h4>
+                            <p class="feature-body" style="margin-bottom: 12px; font-size: 0.85rem; color: #8896ab;">Entering passwords, screenshotting crooked segments, and scaling manually wastes high-gloss paper sheets.</p>
+                            <div class="card-meta">
+                                <span class="meta-title">⏱️ Photoshop Time:</span>
+                                <span class="meta-value" style="color: var(--color-danger);">5 Minutes</span>
+                            </div>
+                        </div>
+                        <div class="comparison-card card-after">
+                            <span class="card-badge badge-green">OG Studio Exact-Fit</span>
+                            <div class="img-container">
+                                <img src="assets/after2.png" alt="Pre-sized card layout" class="comp-img">
+                            </div>
+                            <h4 style="margin-bottom: 6px; color: #ffffff;">Exact 54x86mm pouch dimensions</h4>
+                            <p class="feature-body" style="margin-bottom: 12px; font-size: 0.85rem; color: #8896ab;">Crops boundaries, boosts text contrast, builds clean card borders, and aligns perfectly.</p>
+                            <div class="card-meta">
+                                <span class="meta-title">🚀 OG Pro Speed:</span>
+                                <span class="meta-value" style="color: var(--color-success);">5 Seconds ⚡</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 3: PAN Card from Govt PDF -->
+                <div class="showcase-item">
+                    <div class="showcase-header-row">
+                        <h3 style="color: var(--accent-primary); display: flex; align-items: center; gap: 8px;">💳 PAN Card Maker from PAN PDF</h3>
+                        <span style="font-size: 0.72rem; background-color: rgba(56, 189, 248, 0.1); padding: 4px 10px; border-radius: 6px; font-weight: 700; color: var(--accent-primary);">Feature 03</span>
+                    </div>
+
+                    <p class="showcase-desc-minimal">
+                        Extracts vector components from official PAN card PDFs, bypassing password locks, and outputs standard duplex card layouts without lagging legacy computer system resources.
+                    </p>
+
+                    <div class="comparison-grid">
+                        <div class="comparison-card card-before">
+                            <span class="card-badge badge-red">Manual Layout Strain</span>
+                            <div class="img-container">
+                                <img src="assets/before3.png" alt="Raw PAN PDF layout struggle" class="comp-img">
+                            </div>
+                            <h4 style="margin-bottom: 6px; color: #ffffff;">Manual front & back selection</h4>
+                            <p class="feature-body" style="margin-bottom: 12px; font-size: 0.85rem; color: #8896ab;">Opening heavy PDFs causes computer freeze. Operator manually adjusts front and back layers.</p>
+                            <div class="card-meta">
+                                <span class="meta-title">⏱️ Manual Time:</span>
+                                <span class="meta-value" style="color: var(--color-danger);">12 Minutes</span>
+                            </div>
+                        </div>
+                        <div class="comparison-card card-after">
+                            <span class="card-badge badge-green">OG Studio 1-Click Duplex</span>
+                            <div class="img-container">
+                                <img src="assets/after3.png" alt="Cleaned PAN Card front and back ready" class="comp-img">
+                            </div>
+                            <h4 style="margin-bottom: 6px; color: #ffffff;">Duplex card alignment ready</h4>
+                            <p class="feature-body" style="margin-bottom: 12px; font-size: 0.85rem; color: #8896ab;">Extracts vector coordinate elements directly for a pristine duplex lamination template.</p>
+                            <div class="card-meta">
+                                <span class="meta-title">🚀 OG Pro Speed:</span>
+                                <span class="meta-value" style="color: var(--color-success);">5 Seconds ⚡</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 4: Offline AI HD 4x Upscaler -->
+                <div class="showcase-item">
+                    <div class="showcase-header-row">
+                        <h3 style="color: var(--accent-primary); display: flex; align-items: center; gap: 8px;">🔮 Offline AI HD 4x Upscaler (Zero Internet)</h3>
+                        <span style="font-size: 0.72rem; background-color: rgba(56, 189, 248, 0.1); padding: 4px 10px; border-radius: 6px; font-weight: 700; color: var(--accent-primary);">Feature 04</span>
+                    </div>
+
+                    <p class="showcase-desc-minimal">
+                        Reconstruct phati-hui compressed WhatsApp images and documents into crisp high-resolution prints, using a fully offline AI neural network running locally on your computer with unlimited access.
+                    </p>
+
+                    <div class="comparison-grid">
+                        <div class="comparison-card card-before">
+                            <span class="card-badge badge-red">Smart Sharpen Distort</span>
+                            <div class="img-container">
+                                <img src="assets/before4.png" alt="Blurry pixelated WhatsApp photo" class="comp-img">
+                            </div>
+                            <h4 style="margin-bottom: 6px; color: #ffffff;">Phata-hua compressed document</h4>
+                            <p class="feature-body" style="margin-bottom: 12px; font-size: 0.85rem; color: #8896ab;">WhatsApp compression blurs text boundaries. Photoshop manual sharpening causes noise artifacts.</p>
+                            <div class="card-meta">
+                                <span class="meta-title">⏱️ Photoshop Time:</span>
+                                <span class="meta-value" style="color: var(--color-danger);">6 Minutes</span>
+                            </div>
+                        </div>
+                        <div class="comparison-card card-after">
+                            <span class="card-badge badge-green">OG Studio AI HD Scale</span>
+                            <div class="img-container">
+                                <img src="assets/after4.png" alt="AI reconstructed crisp HD photo" class="comp-img">
+                            </div>
+                            <h4 style="margin-bottom: 6px; color: #ffffff;">4x Neural Super-Resolution</h4>
+                            <p class="feature-body" style="margin-bottom: 12px; font-size: 0.85rem; color: #8896ab;">Locally processes and outputs razor-sharp print contours without requiring active internet access.</p>
+                            <div class="card-meta">
+                                <span class="meta-title">🚀 OG Pro Speed:</span>
+                                <span class="meta-value" style="color: var(--color-success);">5 Seconds ⚡</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 5: Universal Card Maker -->
+                <div class="showcase-item">
+                    <div class="showcase-header-row">
+                        <h3 style="color: var(--accent-primary); display: flex; align-items: center; gap: 8px;">🃏 Universal Card Maker (Standard Pouch Layout)</h3>
+                        <span style="font-size: 0.72rem; background-color: rgba(56, 189, 248, 0.1); padding: 4px 10px; border-radius: 6px; font-weight: 700; color: var(--accent-primary);">Feature 05</span>
+                    </div>
+
+                    <p class="showcase-desc-minimal">
+                        Format Voter ID, Health Card, Ayushman, E-Shram, or custom templates using a single universal dialog tool that auto-aligns, crops, and pairs card layouts perfectly.
+                    </p>
+
+                    <div class="comparison-grid">
+                        <div class="comparison-card card-before">
+                            <span class="card-badge badge-red">Manual Grid Settings</span>
+                            <div class="img-container">
+                                <img src="assets/before5.png" alt="Crooked card manual alignment" class="comp-img">
+                            </div>
+                            <h4 style="margin-bottom: 6px; color: #ffffff;">Manual custom dimension grids</h4>
+                            <p class="feature-body" style="margin-bottom: 12px; font-size: 0.85rem; color: #8896ab;">Operators must remember separate proportions for different cards and adjust sizing grids every single time.</p>
+                            <div class="card-meta">
+                                <span class="meta-title">⏱️ Photoshop Time:</span>
+                                <span class="meta-value" style="color: var(--color-danger);">10 Minutes</span>
+                            </div>
+                        </div>
+                        <div class="comparison-card card-after">
+                            <span class="card-badge badge-green">OG Universal Dialog</span>
+                            <div class="img-container">
+                                <img src="assets/after5.jpg" alt="Cleaned card using universal card builder" class="comp-img">
+                            </div>
+                            <h4 style="margin-bottom: 6px; color: #ffffff;">Standardized card duplex alignment</h4>
+                            <p class="feature-body" style="margin-bottom: 12px; font-size: 0.85rem; color: #8896ab;">Automatically frames any government/custom card layout standard duplex boundaries in seconds.</p>
+                            <div class="card-meta">
+                                <span class="meta-title">🚀 OG Pro Speed:</span>
+                                <span class="meta-value" style="color: var(--color-success);">5 Seconds ⚡</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">💰 Pure Value, No Clutter</span>
+                <h2 class="section-title">Transparent Subscription Plans</h2>
+                <p class="section-desc">Try it completely free for 14 days. Activate standard plans manually with UPI. No auto-debits ever.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Plan 1: Trial -->
+                <div class="price-card">
+                    <div class="price-header">
+                        <img src="assets/trial_gift.png" alt="Trial Gift" style="width: 75px; height: 75px; margin: 0 auto 15px auto; display: block; filter: drop-shadow(0 10px 20px rgba(56, 189, 248, 0.3));">
+                        <span class="plan-tag tag-grey">Step 1 — Trial Pack</span>
+                        <h3 class="plan-name">14 Days Free</h3>
+                        <div class="plan-price"><span class="currency">₹</span>0</div>
+                        <p class="plan-subtitle">Verify computer compatibility</p>
+                    </div>
+                    <div class="divider"></div>
+                    <ul class="plan-features">
+                        <li>✔️ **14 Days** complete free access</li>
+                        <li>✔️ **Fully Unlocked** Pro version features chalu</li>
+                        <li>✔️ **No Watermarks** on prints or exports</li>
+                        <li>✔️ **Unlimited** crop sheets & AI upscale actions</li>
+                        <li>✔️ 1 Active PC hardware license key</li>
+                    </ul>
+                    <a href="https://github.com/sambhuu/OG-The-Releases/releases/download/3.0/OGStudio_Setup.exe" class="btn btn-outline btn-block" id="price-btn-trial">Start Free Trial (.exe)</a>
+                </div>
+
+                <!-- Plan 2: Intro Offer -->
+                <div class="price-card" style="border: 1px solid var(--accent-primary);">
+                    <div class="price-header">
+                        <span class="plan-tag tag-blue">Step 2 — Promotional Offer</span>
+                        <h3 class="plan-name">First Month Promo</h3>
+                        <div class="plan-price"><span class="currency">₹</span>149<span class="period">/ 1st Month</span></div>
+                        <p class="plan-subtitle">Ultra-low cost onboarding pack</p>
+                    </div>
+                    <div class="divider"></div>
+                    <ul class="plan-features">
+                        <li>✔️ **30 Days** complete premium access after trial</li>
+                        <li>✔️ **Fully Unlocked** Pro version features</li>
+                        <li>✔️ **No Watermarks** on any document renders</li>
+                        <li>✔️ **Unlimited** crops & high-res actions</li>
+                        <li>✔️ 1 Active PC hardware license key</li>
+                    </ul>
+                    <a href="https://github.com/sambhuu/OG-The-Releases/releases/download/3.0/OGStudio_Setup.exe" class="btn btn-outline btn-block" id="price-btn-promo" style="border-color: var(--accent-primary); color: var(--accent-primary);">Get First Month Promo</a>
+                </div>
+
+                <!-- Plan 3: Monthly -->
+                <div class="price-card">
+                    <div class="price-header">
+                        <span class="plan-tag tag-grey">Step 3A — Standard Monthly</span>
+                        <h3 class="plan-name">Monthly Plan</h3>
+                        <div class="plan-price"><span class="currency">₹</span>349<span class="period">/ Month</span></div>
+                        <p class="plan-subtitle">Flexible month-to-month plan</p>
+                    </div>
+                    <div class="divider"></div>
+                    <ul class="plan-features">
+                        <li>✔️ **Fully Unlocked** Pro version features</li>
+                        <li>✔️ **Unlimited** crops & high-res actions</li>
+                        <li>✔️ **No Watermarks** on print exports</li>
+                        <li>✔️ 1 Active PC hardware license key</li>
+                        <li>✔️ **No Auto-Debits** (Pay manually only when needed)</li>
+                        <li>❌ No discount applied (Monthly rate)</li>
+                    </ul>
+                    <a href="https://github.com/sambhuu/OG-The-Releases/releases/download/3.0/OGStudio_Setup.exe" class="btn btn-outline btn-block" id="price-btn-monthly">Subscribe Monthly</a>
+                </div>
+
+                <!-- Plan 4: Yearly -->
+                <div class="price-card featured-card">
+                    <div class="featured-ribbon">🔥 BEST VALUE</div>
+                    <div class="price-header">
+                        <img src="assets/yearly_premium.png" alt="Premium Crown" style="width: 80px; height: 80px; margin: 0 auto 15px auto; display: block; filter: drop-shadow(0 10px 20px rgba(251, 191, 36, 0.4));">
+                        <span class="plan-tag tag-gold">Step 3B — Bumper Annual</span>
+                        <h3 class="plan-name">Yearly Plan</h3>
+                        <div class="plan-price"><span class="currency">₹</span>1,299<span class="period">/ Year</span></div>
+                        <p class="plan-subtitle">Less than ₹3.60 / day. Saves over 68%!</p>
+                    </div>
+                    <div class="divider"></div>
+                    <ul class="plan-features">
+                        <li>✔️ **12 Months (365 Days)** complete premium access</li>
+                        <li>✔️ **Fully Unlocked** Pro features active</li>
+                        <li>✔️ **Unlimited** crops & high-res actions</li>
+                        <li>✔️ **No Watermarks** on all printed templates</li>
+                        <li>✔️ 1 Active PC hardware license key</li>
+                        <li>✔️ **Priority WhatsApp Support** directly with Sambhav</li>
+                        <li>✔️ Save over 68% compared to Monthly subscription</li>
+                    </ul>
+                    <a href="https://github.com/sambhuu/OG-The-Releases/releases/download/3.0/OGStudio_Setup.exe" class="btn btn-primary btn-block btn-featured" id="price-btn-yearly">Activate Yearly Plan</a>
+                </div>
+            </div>
+
+            <!-- Simplified Ambassadorship Callout -->
+            <div class="referral-banner" style="background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.2); padding: 24px; border-radius: 16px; margin-top: 40px; text-align: center; display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <img src="assets/referral_cashback.png" alt="Cashback Wallet" style="width: 70px; height: 70px; object-fit: contain; filter: drop-shadow(0 10px 15px rgba(16, 185, 129, 0.3));">
+                <h4 style="font-size: 1.3rem; color: #10b981; margin: 0;">Get ₹50 Cashback by Referring Other Cyber Cafe Waale Bhaiya!</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand" style="display: flex; flex-direction: column; gap: 16px;">
+                <a href="#" class="logo footer-logo" style="display: inline-flex; align-items: center; gap: 8px;">
+                    <img src="assets/logo.png" alt="OG Studio Pro Logo" style="height: 32px; width: 32px; border-radius: 8px;">
+                    <span>OG Studio Pro</span>
+                </a>
+                <p>Digital Counter Assistant tailored specifically for Cyber Cafes across India.</p>
+                <div class="developer-badge" style="display: flex; align-items: center; gap: 12px; background-color: var(--bg-elevated); border: 1px solid var(--border-subtle); padding: 12px; border-radius: 14px;">
+                    <img src="assets/developer.png" alt="Sambhav - Developer" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-primary);">
+                    <div style="display: flex; flex-direction: column; text-align: left;">
+                        <strong style="color: #ffffff; font-size: 0.9rem;">Sambhav</strong>
+                        <span style="font-size: 0.75rem; color: #8896ab;">Founder & Lead Developer</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-links-col">
+                <h4>Software</h4>
+                <a href="https://github.com/sambhuu/OG-The-Releases/releases/download/3.0/OGStudio_Setup.exe">Download Setup (.exe)</a>
+                <a href="#showcase">Key Features</a>
+                <a href="#pricing">Pricing Plans</a>
+            </div>
+
+            <div class="footer-links-col">
+                <h4>Support Desk</h4>
+                <p>📞 WhatsApp Support: <strong>9472497513</strong></p>
+                <p>📧 Email Support: <a href="mailto:itsmrkumarsambhav@gmail.com" style="color: var(--accent-primary); text-decoration: underline;">itsmrkumarsambhav@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 OG Studio Pro. Crafted locally for Digital Counter Speed. All rights reserved.</p>
+                <p>Developed & Maintained by Sambhav.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript logic -->
+    <script src="main.js"></script>
+
+    <!-- Visual Upgrades JS -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Select all elements that should animate on scroll
+            const animatedElements = document.querySelectorAll('.showcase-item, .pricing-card, .section-header, .comparison-card, .hero-left-column, .founder-cutout-container');
+            
+            // Apply initial hidden state class
+            animatedElements.forEach(el => {
+                el.classList.add('fade-in-up');
+            });
+
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const scrollObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            animatedElements.forEach(el => {
+                scrollObserver.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
